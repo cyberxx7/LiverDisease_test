@@ -1,6 +1,6 @@
 ---
 title: "Determining the most effective Test for Liver disease that might be caused by excessive Alcohol Consumption"
-author: "demola"
+author: " Adeniyi Samson Ademola"
 date: "12/7/2021"
 output: html_document
 ---
@@ -39,7 +39,7 @@ nw <- normalize(new1)
 nw
 ```
 
-This Code displays the 3dbarchart but the plot_gg function is absent in the ggplot library. This is a software error, and it is confirmed after doing my research online.
+This Code displays the 3dbarchart but the plot_gg function is absent in the ggplot library. It requires me to update the ggplot library and after perusing the web, I could not find the latest version for Mac. Apparently, they released an exe update of the library for Windows and none for Mac yet. 
 ```{r}
 new2 = ggplot(nw) + 
   geom_point(aes(x=MCV,color=cyl,y=Drinks),size=2) +
@@ -68,8 +68,21 @@ Also, The heatmap clusters Rows that are highy similar.
 
 
 
-
-
+Libraries used for this Analysis
+```{r}
+library(heatmaply)
+library(plotly)
+library(ggplot2)
+library(viridis)
+library(datasets)
+library(data.table)
+library(grDevices)
+library(graphics)
+library(methods)
+library(stats)
+library(viridisLite)
+library(Hmisc)
+```
 
 
 
